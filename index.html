@@ -1,16 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.4">
-  <style type="text/css">
-    span.s1 {font-kerning: none}
-  </style>
-</head>
-<body>
-<h1 style="margin: 0.0px 0.0px 18.0px 0.0px; text-align: center; font: 28.5px '.SF NS'; color: #191c1f; -webkit-text-stroke: #191c1f"><span class="s1">Recommended Books &amp; Movies</span></h1>
-</body>
+      <!-- Step 1 Use Starter Template/Meta Tag -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" />
+    <title>Mr.Proud Books </title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center my-4">The Sci-Fi Edition</h1>
+<!-- Step 2 - 3  Add list of books, Allow user to add books (title & genre) -->
+<div class="mb-3">
+    <input type="text" id="title" class="form-control" placeholder="Enter Title">
+    <input type="text" id="genre" class="form-control mt-2" placeholder="Enter Genre">
+    <input type="text" id="author" class="form-control mt-2" placeholder="Enter Author">
+    <select id="status" class="form-control mt-2">
+ <!-- Step 4 - 7 Alter Status , Delete(will be in js), add data field , and rating -->
+ <option value="to-read">To Read/Watch</option>
+ <option value="in-progress">In Progress</option>
+ <option value="completed">Completed</option>
+</select>
+<input type="number" id="rating" class="form-control mt-2" placeholder="Rate (1-5)">
+<button class="btn btn-primary mt-2" onclick="addEntry()">Add</button>
+</div>
+<!-- Step 8 Search  -->
+<div class="mb-4">
+    <h2>Search</h2>
+    <input type="text" class="form-control" id="search" placeholder="Search by title or author">
+  </div>
+  <!-- Step 9 Sorting/Filtering options -->
+  <h2>Fandom</h2>
+  <table class="table table-striped" id="bookTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Status</th>
+        <th>Rating</th>
+        <th>Notes</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Books will be  added here -->
+    </tbody>
+  </table>
+
+  <!-- Step 10 Celebration -->
+  <div id="celebration" class="text-center" style="display: none;">
+    <img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" alt="Celebration" class="img-fluid">
+    <audio id="celebrationSound" src="https://www.soundjay.com/button/beep-07.mp3"></audio>
+  </div>
+</div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    
+  </body>
 </html>
